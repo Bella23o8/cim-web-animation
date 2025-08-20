@@ -18,29 +18,16 @@
 
     <h2>JSON-Animation (springender Ball)</h2>
     <div class="stage" id="lotti-json"></div>
-    <button id="airplane-btn">Airplane Animation abspielen</button>
+
 
     <script>
-        // Standardanimation laden
-        let animation = lottie.loadAnimation({
+
+        lottie.loadAnimation({
             container: document.getElementById('lotti-json'),
             renderer: 'svg', 
             loop: true, 
             autoplay: true,
-            path: 'assets/springender Ball.json'
-        });
-
-        document.getElementById('airplane-btn').addEventListener('click', function() {
-            // Vorherige Animation stoppen und entfernen
-            animation.destroy();
-            // Neue Animation laden (nur einmal abspielen)
-            animation = lottie.loadAnimation({
-                container: document.getElementById('lotti-json'),
-                renderer: 'svg',
-                loop: false,
-                autoplay: true,
-                path: 'assets/airplane.json'
-            });
+            path: 'assets/springender Ball.json' // Pfad zur JSON-Animation
         });
     </script>
 </body>
