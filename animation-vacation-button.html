@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacation Button</title>
+
+    <style>
+.button {
+    width: 200px;
+    height: 50px;
+    background-color: bisque;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+    margin-top: 25%;
+    margin-left: 45%;
+}
+
+    </style>
+</head>
+<body>
+
+<button class="button" id="airplane-btn">Vacation Mode</button>
+<div id="lotti-json"></div>
+
+<script>
+document.getElementById('airplane-btn').addEventListener('click', function() {
+    animation.destroy();
+    animation = airplane.loadAnimation({
+        container: document.getElementById('assets/airplane.json'),
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: 'assets/airplane.json' // <-- Hier wird airplane.json geladen und abgespielt
+    });
+});
+</script>
+    
+</body>
+</html>

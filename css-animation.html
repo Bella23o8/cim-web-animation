@@ -20,6 +20,25 @@
             transform: translateX(-50%);
             left: 50%;
             top: 40px;
+            animation: bounce 1s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }  
+            /* Mögliche andere Werte:
+               animation-iteration-count: 1, 2, 3, ... (Anzahl der Durchläufe), infinite (unendlich)
+               animation-timing-function: ease, ease-in, ease-out, ease-in-out, step-start, step-end, steps(n), cubic-bezier(...)
+            */
+        
+
+             /* Animation for bouncing effect */
+            @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            50% {
+                transform: translateY(200px) translateX(-50%);}
+
+            100% {
+                transform: translateY(0) translateX(-50%);
+            }
             
 
         }
